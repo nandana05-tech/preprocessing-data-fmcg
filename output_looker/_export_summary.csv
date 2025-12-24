@@ -1,0 +1,17 @@
+table_name,rows,columns,file_size_kb
+agg_revenue_by_country,7,6,0.41
+agg_monthly_trend,36,8,1.93
+agg_weekly_trend,7,8,0.49
+top_20_sku,20,10,1.66
+sku_revenue,102,8,6.94
+abc_summary,3,5,0.17
+xyz_summary,1,4,0.07
+abc_by_region,21,7,1.0
+promo_analysis,2,6,0.2
+promo_lift_by_cat,5,6,0.34
+correlation_matrix,7,7,0.37
+dim_sku,102,12,9.74
+dim_store,13,11,1.26
+dim_supplier,60,12,4.47
+abc_df,102,11,8.64
+xyz_df,102,9,8.8

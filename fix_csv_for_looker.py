@@ -51,13 +51,14 @@ def clean_column_name(col_name: str) -> str:
     return cleaned
 
 
-def format_numeric_value(value, col_name: str):
+def format_numeric_value(value, col_name: str, is_correlation: bool = False):
     """
     Memformat nilai numerik berdasarkan tipe kolom.
     
     Args:
         value: Nilai yang akan diformat
         col_name: Nama kolom untuk menentukan format
+        is_correlation: True jika file adalah correlation matrix
     
     Returns:
         Nilai yang sudah diformat
@@ -65,11 +66,18 @@ def format_numeric_value(value, col_name: str):
     if pd.isna(value):
         return ''
     
-    # Kolom yang seharusnya integer
-    integer_columns = ['count', 'units', 'rows', 'columns', 'sku_count', 'transaction_count']
+    # Untuk correlation matrix, selalu gunakan format float dengan 2-3 desimal
+    if is_correlation:
+        if isinstance(value, (int, float)):
+            return round(value, 3)  # Presisi 3 desimal untuk korelasi
+        return value
+    
+    # Kolom yang seharusnya integer (hanya untuk non-correlation files)
+    # Gunakan exact match untuk menghindari false positive
+    integer_columns = ['count', 'rows', 'columns', 'sku_count', 'transaction_count']
     
     # Kolom persentase (format 2 desimal)
-    percentage_columns = ['pct', 'percentage', 'margin', 'discount', 'cv']
+    percentage_columns = ['pct', 'percentage', 'margin', 'cv']
     
     # Kolom revenue/price (format 2 desimal)
     money_columns = ['revenue', 'price', 'sales', 'cost']
@@ -77,8 +85,8 @@ def format_numeric_value(value, col_name: str):
     col_lower = col_name.lower()
     
     if isinstance(value, (int, float)):
-        # Cek apakah kolom integer
-        if any(term in col_lower for term in integer_columns):
+        # Cek apakah kolom integer - gunakan exact match di akhir nama kolom
+        if any(col_lower.endswith(term) or col_lower == term for term in integer_columns):
             return int(value) if not pd.isna(value) else ''
         # Cek apakah kolom persentase atau uang
         elif any(term in col_lower for term in percentage_columns + money_columns):
@@ -167,8 +175,10 @@ def fix_csv_files(input_folder: str, output_folder: str) -> dict:
             fixes_applied.append("Trimmed whitespace in text columns")
             
             # 5. Format nilai numerik
+            # Deteksi apakah ini correlation matrix untuk mempertahankan presisi
+            is_correlation = 'correlation' in filename.lower()
             for col in df.select_dtypes(include=['float64', 'int64']).columns:
-                df[col] = df[col].apply(lambda x: format_numeric_value(x, col))
+                df[col] = df[col].apply(lambda x: format_numeric_value(x, col, is_correlation))
             fixes_applied.append("Standardized numeric formatting")
             
             # 6. Ganti NaN dengan string kosong untuk kompatibilitas Sheets

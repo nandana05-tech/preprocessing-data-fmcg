@@ -209,4 +209,4 @@ LANGKAH SELANJUTNYA:
   4. Di Looker, pilih 'Google Sheets' sebagai data source
 ======================================================================
 
-File output: c:\pdvd-project\uas-pdvd\output_looker_sheets_ready
+File output: c:\pdvd-project\uas\preprocessing-data-fmcg\output_looker_sheets_ready
