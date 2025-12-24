@@ -11,7 +11,7 @@ Perbaikan yang dilakukan:
 7. Menggunakan UTF-8 encoding dengan BOM untuk kompatibilitas maksimal
 8. Menyimpan file yang sudah diperbaiki ke folder baru
 
-Author: Generated for UAS PDVD Project
+Author: Nandana Ayudya Natasaskara
 Date: 2025-12-08
 """
 
