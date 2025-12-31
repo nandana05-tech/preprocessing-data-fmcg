@@ -189,10 +189,11 @@ Rows: 2 | Columns: 7
 ------------------------------------------------------------
 
 ## promo_lift_by_cat.csv
-Rows: 5 | Columns: 6
+Rows: 5 | Columns: 7
 
 | Column Name | Type (suggested) |
 |-------------|-----------------|
+| category | STRING |
 | revenue_no_promo | FLOAT (currency) |
 | revenue_with_promo | FLOAT (currency) |
 | units_no_promo | INTEGER |

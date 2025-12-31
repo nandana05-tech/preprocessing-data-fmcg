@@ -136,8 +136,8 @@ DETAIL PERBAIKAN
 
 [FILE] promo_lift_by_cat.csv
    Status: [OK] Berhasil
-   Baris: 5, Kolom: 6
-   Nama Kolom: revenue_no_promo, revenue_with_promo, units_no_promo, units_with_promo, revenue_lift...
+   Baris: 5, Kolom: 7
+   Nama Kolom: category, revenue_no_promo, revenue_with_promo, units_no_promo, units_with_promo...
    Perbaikan yang diterapkan:
      - Trimmed whitespace in text columns
      - Standardized numeric formatting
