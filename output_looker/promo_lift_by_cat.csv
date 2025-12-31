@@ -1,6 +1,6 @@
-category,revenue_no_promo,revenue_with_promo,units_no_promo,units_with_promo,revenue_lift,units_lift
-Snacks,112049944.86,18093301.68,59.97,100.17,-0.8385,0.6703
-Beverages,90756426.77,13347304.91,61.99,127.01,-0.8529,1.0489
-Home Care,57650422.96,7678231.03,48.5,112.19,-0.8668,1.3132
-Personal Care,82858066.48,6692223.16,51.53,86.14,-0.9192,0.6716
-Dairy,80232734.73,3587796.25,50.24,82.14,-0.9553,0.635
+﻿category,revenue_no_promo,revenue_with_promo,units_no_promo,units_with_promo,revenue_lift,units_lift
+Snacks,112049944.86,18093301.68,59.97,100.17,-0.84,0.67
+Beverages,90756426.77,13347304.91,61.99,127.01,-0.85,1.05
+Home Care,57650422.96,7678231.03,48.50,112.19,-0.87,1.31
+Personal Care,82858066.48,6692223.16,51.53,86.14,-0.92,0.67
+Dairy,80232734.73,3587796.25,50.24,82.14,-0.96,0.64

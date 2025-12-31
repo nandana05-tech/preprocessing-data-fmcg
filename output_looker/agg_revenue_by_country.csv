@@ -1,8 +1,8 @@
-country,total_revenue,total_units,avg_price,transaction_count,avg_revenue_per_transaction
+﻿country,total_revenue,total_units,avg_price,transaction_count,avg_revenue_per_transaction
 Italy,137193076.12,19361774,7.59,350400,391.53
 Spain,106704767.04,14668017,7.78,262800,406.03
 Germany,88525559.01,11738571,7.89,175200,505.28
-Austria,43020025.97,5742174,7.8,87600,491.1
+Austria,43020025.97,5742174,7.80,87600,491.10
 France,42601612.57,6014974,7.46,87600,486.32
 Poland,42385262.52,5860180,7.65,87600,483.85
-Netherlands,12516149.6,1730292,8.01,48800,256.48
+Netherlands,12516149.60,1730292,8.01,48800,256.48

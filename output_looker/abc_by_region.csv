@@ -1,9 +1,9 @@
-country,abc_class,total_revenue,total_units,transaction_count,unique_skus,revenue_pct
+﻿country,abc_class,total_revenue,total_units,transaction_count,unique_skus,revenue_pct
 Austria,A,33414618.51,3260622,39420,36,77.67
 Austria,B,7370217.14,1663860,27375,25,17.13
-Austria,C,2235190.32,817692,20805,19,5.2
+Austria,C,2235190.32,817692,20805,19,5.20
 France,A,34409241.71,3626639,42705,39,80.77
-France,B,5911428.0,1459295,22995,21,13.88
+France,B,5911428.00,1459295,22995,21,13.88
 France,C,2280942.86,929040,21900,20,5.35
 Germany,A,70941777.58,7085969,86505,47,80.14
 Germany,B,13481234.31,3137857,49275,28,15.23
